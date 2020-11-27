@@ -5,7 +5,7 @@ import 'package:tradedepot_demo/core/services/firebase/authentication.dart';
 
 abstract class UserRemoteDataSource {
 
-  Future<ApiResult<bool>> signIn(String email, String password);
+  Future<bool> signIn(String email, String password);
 
 }
 
@@ -15,7 +15,7 @@ class UserRemoteDataSourceImpl implements UserRemoteDataSource{
 
 
   @override
-  Future<ApiResult<bool>> signIn(String email, String password) {
+  Future<bool> signIn(String email, String password) {
     final auth = _read(authenticationProvider);
     return auth.signIn(email, password);
   }

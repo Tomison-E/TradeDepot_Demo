@@ -1,7 +1,7 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_riverpod/all.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:tradedepot_demo/app/signUp/data/dataSources/userRemoteDataSource.dart';
-import 'package:tradedepot_demo/core/networkResponse/api_result.dart';
 import 'package:tradedepot_demo/core/services/firebase/authentication.dart';
 
 
@@ -12,19 +12,14 @@ import 'package:tradedepot_demo/core/services/firebase/authentication.dart';
  class _FakeAuthService implements AuthenticationService {
 
 
-   Future<ApiResult<bool>> createUser(String email, String password) async {
-      return email==tEmail && password == tPassword ? ApiResult.success(data: true) : ApiResult.success(data: false);
+   Future<bool> createUser(String email, String password) async {
+      return email==tEmail && password == tPassword ?  true : false;
    }
 
 
-   Future<ApiResult<bool>> signIn(String email, String password) async{
-     try {
-       return email == tEmail && password == tPassword ? ApiResult.success(
-           data: true) : ApiResult.success(data: false);
-     }
-     catch(e){
-       return ApiResult.error(errorMsg: "failed");
-     }
+   Future<bool> signIn(String email, String password) async{
+       if(email.isEmpty) throw FirebaseAuthException(message: "Invalid Email");
+       return email == tEmail && password == tPassword ? true: false;
    }
  }
 
@@ -37,13 +32,16 @@ import 'package:tradedepot_demo/core/services/firebase/authentication.dart';
      );
 
 
-
      test('signing value returns true ', () async{
-       expect(await container.read(userRemoteDataProvider).signIn(tEmail, tPassword), ApiResult.success(data: true));
+       expect(await container.read(userRemoteDataProvider).signIn(tEmail, tPassword), true);
      });
 
      test('signing value returns false', () async{
-       expect(await container.read(userRemoteDataProvider).signIn(tEmail, "wrong Password"), ApiResult.success(data: false));
+       expect(await container.read(userRemoteDataProvider).signIn(tEmail, "wrong Password"), false);
+     });
+
+     test('signing value returns exception', () async{
+       expect(()async=> await container.read(userRemoteDataProvider).signIn("", "wrong Password"), throwsA(FirebaseAuthException(message: "Invalid Email")));
      });
    });
  }
