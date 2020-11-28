@@ -101,6 +101,16 @@ class _$NetworkExceptionsTearOff {
   UnexpectedError unexpectedError() {
     return const UnexpectedError();
   }
+
+// ignore: unused_element
+  ServerError serverException() {
+    return const ServerError();
+  }
+
+// ignore: unused_element
+  CacheError cacheException() {
+    return const CacheError();
+  }
 }
 
 /// @nodoc
@@ -128,6 +138,8 @@ mixin _$NetworkExceptions {
     @required TResult unableToProcess(),
     @required TResult defaultError(String error),
     @required TResult unexpectedError(),
+    @required TResult serverException(),
+    @required TResult cacheException(),
   });
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object>({
@@ -148,6 +160,8 @@ mixin _$NetworkExceptions {
     TResult unableToProcess(),
     TResult defaultError(String error),
     TResult unexpectedError(),
+    TResult serverException(),
+    TResult cacheException(),
     @required TResult orElse(),
   });
   @optionalTypeArgs
@@ -169,6 +183,8 @@ mixin _$NetworkExceptions {
     @required TResult unableToProcess(UnableToProcess value),
     @required TResult defaultError(DefaultError value),
     @required TResult unexpectedError(UnexpectedError value),
+    @required TResult serverException(ServerError value),
+    @required TResult cacheException(CacheError value),
   });
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object>({
@@ -189,6 +205,8 @@ mixin _$NetworkExceptions {
     TResult unableToProcess(UnableToProcess value),
     TResult defaultError(DefaultError value),
     TResult unexpectedError(UnexpectedError value),
+    TResult serverException(ServerError value),
+    TResult cacheException(CacheError value),
     @required TResult orElse(),
   });
 }
@@ -266,6 +284,8 @@ class _$RequestCancelled implements RequestCancelled {
     @required TResult unableToProcess(),
     @required TResult defaultError(String error),
     @required TResult unexpectedError(),
+    @required TResult serverException(),
+    @required TResult cacheException(),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -284,6 +304,8 @@ class _$RequestCancelled implements RequestCancelled {
     assert(unableToProcess != null);
     assert(defaultError != null);
     assert(unexpectedError != null);
+    assert(serverException != null);
+    assert(cacheException != null);
     return requestCancelled();
   }
 
@@ -307,6 +329,8 @@ class _$RequestCancelled implements RequestCancelled {
     TResult unableToProcess(),
     TResult defaultError(String error),
     TResult unexpectedError(),
+    TResult serverException(),
+    TResult cacheException(),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -336,6 +360,8 @@ class _$RequestCancelled implements RequestCancelled {
     @required TResult unableToProcess(UnableToProcess value),
     @required TResult defaultError(DefaultError value),
     @required TResult unexpectedError(UnexpectedError value),
+    @required TResult serverException(ServerError value),
+    @required TResult cacheException(CacheError value),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -354,6 +380,8 @@ class _$RequestCancelled implements RequestCancelled {
     assert(unableToProcess != null);
     assert(defaultError != null);
     assert(unexpectedError != null);
+    assert(serverException != null);
+    assert(cacheException != null);
     return requestCancelled(this);
   }
 
@@ -377,6 +405,8 @@ class _$RequestCancelled implements RequestCancelled {
     TResult unableToProcess(UnableToProcess value),
     TResult defaultError(DefaultError value),
     TResult unexpectedError(UnexpectedError value),
+    TResult serverException(ServerError value),
+    TResult cacheException(CacheError value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -447,6 +477,8 @@ class _$UnauthorisedRequest implements UnauthorisedRequest {
     @required TResult unableToProcess(),
     @required TResult defaultError(String error),
     @required TResult unexpectedError(),
+    @required TResult serverException(),
+    @required TResult cacheException(),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -465,6 +497,8 @@ class _$UnauthorisedRequest implements UnauthorisedRequest {
     assert(unableToProcess != null);
     assert(defaultError != null);
     assert(unexpectedError != null);
+    assert(serverException != null);
+    assert(cacheException != null);
     return unauthorisedRequest();
   }
 
@@ -488,6 +522,8 @@ class _$UnauthorisedRequest implements UnauthorisedRequest {
     TResult unableToProcess(),
     TResult defaultError(String error),
     TResult unexpectedError(),
+    TResult serverException(),
+    TResult cacheException(),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -517,6 +553,8 @@ class _$UnauthorisedRequest implements UnauthorisedRequest {
     @required TResult unableToProcess(UnableToProcess value),
     @required TResult defaultError(DefaultError value),
     @required TResult unexpectedError(UnexpectedError value),
+    @required TResult serverException(ServerError value),
+    @required TResult cacheException(CacheError value),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -535,6 +573,8 @@ class _$UnauthorisedRequest implements UnauthorisedRequest {
     assert(unableToProcess != null);
     assert(defaultError != null);
     assert(unexpectedError != null);
+    assert(serverException != null);
+    assert(cacheException != null);
     return unauthorisedRequest(this);
   }
 
@@ -558,6 +598,8 @@ class _$UnauthorisedRequest implements UnauthorisedRequest {
     TResult unableToProcess(UnableToProcess value),
     TResult defaultError(DefaultError value),
     TResult unexpectedError(UnexpectedError value),
+    TResult serverException(ServerError value),
+    TResult cacheException(CacheError value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -627,6 +669,8 @@ class _$BadRequest implements BadRequest {
     @required TResult unableToProcess(),
     @required TResult defaultError(String error),
     @required TResult unexpectedError(),
+    @required TResult serverException(),
+    @required TResult cacheException(),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -645,6 +689,8 @@ class _$BadRequest implements BadRequest {
     assert(unableToProcess != null);
     assert(defaultError != null);
     assert(unexpectedError != null);
+    assert(serverException != null);
+    assert(cacheException != null);
     return badRequest();
   }
 
@@ -668,6 +714,8 @@ class _$BadRequest implements BadRequest {
     TResult unableToProcess(),
     TResult defaultError(String error),
     TResult unexpectedError(),
+    TResult serverException(),
+    TResult cacheException(),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -697,6 +745,8 @@ class _$BadRequest implements BadRequest {
     @required TResult unableToProcess(UnableToProcess value),
     @required TResult defaultError(DefaultError value),
     @required TResult unexpectedError(UnexpectedError value),
+    @required TResult serverException(ServerError value),
+    @required TResult cacheException(CacheError value),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -715,6 +765,8 @@ class _$BadRequest implements BadRequest {
     assert(unableToProcess != null);
     assert(defaultError != null);
     assert(unexpectedError != null);
+    assert(serverException != null);
+    assert(cacheException != null);
     return badRequest(this);
   }
 
@@ -738,6 +790,8 @@ class _$BadRequest implements BadRequest {
     TResult unableToProcess(UnableToProcess value),
     TResult defaultError(DefaultError value),
     TResult unexpectedError(UnexpectedError value),
+    TResult serverException(ServerError value),
+    TResult cacheException(CacheError value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -826,6 +880,8 @@ class _$NotFound implements NotFound {
     @required TResult unableToProcess(),
     @required TResult defaultError(String error),
     @required TResult unexpectedError(),
+    @required TResult serverException(),
+    @required TResult cacheException(),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -844,6 +900,8 @@ class _$NotFound implements NotFound {
     assert(unableToProcess != null);
     assert(defaultError != null);
     assert(unexpectedError != null);
+    assert(serverException != null);
+    assert(cacheException != null);
     return notFound(reason);
   }
 
@@ -867,6 +925,8 @@ class _$NotFound implements NotFound {
     TResult unableToProcess(),
     TResult defaultError(String error),
     TResult unexpectedError(),
+    TResult serverException(),
+    TResult cacheException(),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -896,6 +956,8 @@ class _$NotFound implements NotFound {
     @required TResult unableToProcess(UnableToProcess value),
     @required TResult defaultError(DefaultError value),
     @required TResult unexpectedError(UnexpectedError value),
+    @required TResult serverException(ServerError value),
+    @required TResult cacheException(CacheError value),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -914,6 +976,8 @@ class _$NotFound implements NotFound {
     assert(unableToProcess != null);
     assert(defaultError != null);
     assert(unexpectedError != null);
+    assert(serverException != null);
+    assert(cacheException != null);
     return notFound(this);
   }
 
@@ -937,6 +1001,8 @@ class _$NotFound implements NotFound {
     TResult unableToProcess(UnableToProcess value),
     TResult defaultError(DefaultError value),
     TResult unexpectedError(UnexpectedError value),
+    TResult serverException(ServerError value),
+    TResult cacheException(CacheError value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -1010,6 +1076,8 @@ class _$MethodNotAllowed implements MethodNotAllowed {
     @required TResult unableToProcess(),
     @required TResult defaultError(String error),
     @required TResult unexpectedError(),
+    @required TResult serverException(),
+    @required TResult cacheException(),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -1028,6 +1096,8 @@ class _$MethodNotAllowed implements MethodNotAllowed {
     assert(unableToProcess != null);
     assert(defaultError != null);
     assert(unexpectedError != null);
+    assert(serverException != null);
+    assert(cacheException != null);
     return methodNotAllowed();
   }
 
@@ -1051,6 +1121,8 @@ class _$MethodNotAllowed implements MethodNotAllowed {
     TResult unableToProcess(),
     TResult defaultError(String error),
     TResult unexpectedError(),
+    TResult serverException(),
+    TResult cacheException(),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -1080,6 +1152,8 @@ class _$MethodNotAllowed implements MethodNotAllowed {
     @required TResult unableToProcess(UnableToProcess value),
     @required TResult defaultError(DefaultError value),
     @required TResult unexpectedError(UnexpectedError value),
+    @required TResult serverException(ServerError value),
+    @required TResult cacheException(CacheError value),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -1098,6 +1172,8 @@ class _$MethodNotAllowed implements MethodNotAllowed {
     assert(unableToProcess != null);
     assert(defaultError != null);
     assert(unexpectedError != null);
+    assert(serverException != null);
+    assert(cacheException != null);
     return methodNotAllowed(this);
   }
 
@@ -1121,6 +1197,8 @@ class _$MethodNotAllowed implements MethodNotAllowed {
     TResult unableToProcess(UnableToProcess value),
     TResult defaultError(DefaultError value),
     TResult unexpectedError(UnexpectedError value),
+    TResult serverException(ServerError value),
+    TResult cacheException(CacheError value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -1191,6 +1269,8 @@ class _$NotAcceptable implements NotAcceptable {
     @required TResult unableToProcess(),
     @required TResult defaultError(String error),
     @required TResult unexpectedError(),
+    @required TResult serverException(),
+    @required TResult cacheException(),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -1209,6 +1289,8 @@ class _$NotAcceptable implements NotAcceptable {
     assert(unableToProcess != null);
     assert(defaultError != null);
     assert(unexpectedError != null);
+    assert(serverException != null);
+    assert(cacheException != null);
     return notAcceptable();
   }
 
@@ -1232,6 +1314,8 @@ class _$NotAcceptable implements NotAcceptable {
     TResult unableToProcess(),
     TResult defaultError(String error),
     TResult unexpectedError(),
+    TResult serverException(),
+    TResult cacheException(),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -1261,6 +1345,8 @@ class _$NotAcceptable implements NotAcceptable {
     @required TResult unableToProcess(UnableToProcess value),
     @required TResult defaultError(DefaultError value),
     @required TResult unexpectedError(UnexpectedError value),
+    @required TResult serverException(ServerError value),
+    @required TResult cacheException(CacheError value),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -1279,6 +1365,8 @@ class _$NotAcceptable implements NotAcceptable {
     assert(unableToProcess != null);
     assert(defaultError != null);
     assert(unexpectedError != null);
+    assert(serverException != null);
+    assert(cacheException != null);
     return notAcceptable(this);
   }
 
@@ -1302,6 +1390,8 @@ class _$NotAcceptable implements NotAcceptable {
     TResult unableToProcess(UnableToProcess value),
     TResult defaultError(DefaultError value),
     TResult unexpectedError(UnexpectedError value),
+    TResult serverException(ServerError value),
+    TResult cacheException(CacheError value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -1372,6 +1462,8 @@ class _$RequestTimeout implements RequestTimeout {
     @required TResult unableToProcess(),
     @required TResult defaultError(String error),
     @required TResult unexpectedError(),
+    @required TResult serverException(),
+    @required TResult cacheException(),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -1390,6 +1482,8 @@ class _$RequestTimeout implements RequestTimeout {
     assert(unableToProcess != null);
     assert(defaultError != null);
     assert(unexpectedError != null);
+    assert(serverException != null);
+    assert(cacheException != null);
     return requestTimeout();
   }
 
@@ -1413,6 +1507,8 @@ class _$RequestTimeout implements RequestTimeout {
     TResult unableToProcess(),
     TResult defaultError(String error),
     TResult unexpectedError(),
+    TResult serverException(),
+    TResult cacheException(),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -1442,6 +1538,8 @@ class _$RequestTimeout implements RequestTimeout {
     @required TResult unableToProcess(UnableToProcess value),
     @required TResult defaultError(DefaultError value),
     @required TResult unexpectedError(UnexpectedError value),
+    @required TResult serverException(ServerError value),
+    @required TResult cacheException(CacheError value),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -1460,6 +1558,8 @@ class _$RequestTimeout implements RequestTimeout {
     assert(unableToProcess != null);
     assert(defaultError != null);
     assert(unexpectedError != null);
+    assert(serverException != null);
+    assert(cacheException != null);
     return requestTimeout(this);
   }
 
@@ -1483,6 +1583,8 @@ class _$RequestTimeout implements RequestTimeout {
     TResult unableToProcess(UnableToProcess value),
     TResult defaultError(DefaultError value),
     TResult unexpectedError(UnexpectedError value),
+    TResult serverException(ServerError value),
+    TResult cacheException(CacheError value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -1553,6 +1655,8 @@ class _$SendTimeout implements SendTimeout {
     @required TResult unableToProcess(),
     @required TResult defaultError(String error),
     @required TResult unexpectedError(),
+    @required TResult serverException(),
+    @required TResult cacheException(),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -1571,6 +1675,8 @@ class _$SendTimeout implements SendTimeout {
     assert(unableToProcess != null);
     assert(defaultError != null);
     assert(unexpectedError != null);
+    assert(serverException != null);
+    assert(cacheException != null);
     return sendTimeout();
   }
 
@@ -1594,6 +1700,8 @@ class _$SendTimeout implements SendTimeout {
     TResult unableToProcess(),
     TResult defaultError(String error),
     TResult unexpectedError(),
+    TResult serverException(),
+    TResult cacheException(),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -1623,6 +1731,8 @@ class _$SendTimeout implements SendTimeout {
     @required TResult unableToProcess(UnableToProcess value),
     @required TResult defaultError(DefaultError value),
     @required TResult unexpectedError(UnexpectedError value),
+    @required TResult serverException(ServerError value),
+    @required TResult cacheException(CacheError value),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -1641,6 +1751,8 @@ class _$SendTimeout implements SendTimeout {
     assert(unableToProcess != null);
     assert(defaultError != null);
     assert(unexpectedError != null);
+    assert(serverException != null);
+    assert(cacheException != null);
     return sendTimeout(this);
   }
 
@@ -1664,6 +1776,8 @@ class _$SendTimeout implements SendTimeout {
     TResult unableToProcess(UnableToProcess value),
     TResult defaultError(DefaultError value),
     TResult unexpectedError(UnexpectedError value),
+    TResult serverException(ServerError value),
+    TResult cacheException(CacheError value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -1731,6 +1845,8 @@ class _$Conflict implements Conflict {
     @required TResult unableToProcess(),
     @required TResult defaultError(String error),
     @required TResult unexpectedError(),
+    @required TResult serverException(),
+    @required TResult cacheException(),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -1749,6 +1865,8 @@ class _$Conflict implements Conflict {
     assert(unableToProcess != null);
     assert(defaultError != null);
     assert(unexpectedError != null);
+    assert(serverException != null);
+    assert(cacheException != null);
     return conflict();
   }
 
@@ -1772,6 +1890,8 @@ class _$Conflict implements Conflict {
     TResult unableToProcess(),
     TResult defaultError(String error),
     TResult unexpectedError(),
+    TResult serverException(),
+    TResult cacheException(),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -1801,6 +1921,8 @@ class _$Conflict implements Conflict {
     @required TResult unableToProcess(UnableToProcess value),
     @required TResult defaultError(DefaultError value),
     @required TResult unexpectedError(UnexpectedError value),
+    @required TResult serverException(ServerError value),
+    @required TResult cacheException(CacheError value),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -1819,6 +1941,8 @@ class _$Conflict implements Conflict {
     assert(unableToProcess != null);
     assert(defaultError != null);
     assert(unexpectedError != null);
+    assert(serverException != null);
+    assert(cacheException != null);
     return conflict(this);
   }
 
@@ -1842,6 +1966,8 @@ class _$Conflict implements Conflict {
     TResult unableToProcess(UnableToProcess value),
     TResult defaultError(DefaultError value),
     TResult unexpectedError(UnexpectedError value),
+    TResult serverException(ServerError value),
+    TResult cacheException(CacheError value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -1912,6 +2038,8 @@ class _$InternalServerError implements InternalServerError {
     @required TResult unableToProcess(),
     @required TResult defaultError(String error),
     @required TResult unexpectedError(),
+    @required TResult serverException(),
+    @required TResult cacheException(),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -1930,6 +2058,8 @@ class _$InternalServerError implements InternalServerError {
     assert(unableToProcess != null);
     assert(defaultError != null);
     assert(unexpectedError != null);
+    assert(serverException != null);
+    assert(cacheException != null);
     return internalServerError();
   }
 
@@ -1953,6 +2083,8 @@ class _$InternalServerError implements InternalServerError {
     TResult unableToProcess(),
     TResult defaultError(String error),
     TResult unexpectedError(),
+    TResult serverException(),
+    TResult cacheException(),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -1982,6 +2114,8 @@ class _$InternalServerError implements InternalServerError {
     @required TResult unableToProcess(UnableToProcess value),
     @required TResult defaultError(DefaultError value),
     @required TResult unexpectedError(UnexpectedError value),
+    @required TResult serverException(ServerError value),
+    @required TResult cacheException(CacheError value),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -2000,6 +2134,8 @@ class _$InternalServerError implements InternalServerError {
     assert(unableToProcess != null);
     assert(defaultError != null);
     assert(unexpectedError != null);
+    assert(serverException != null);
+    assert(cacheException != null);
     return internalServerError(this);
   }
 
@@ -2023,6 +2159,8 @@ class _$InternalServerError implements InternalServerError {
     TResult unableToProcess(UnableToProcess value),
     TResult defaultError(DefaultError value),
     TResult unexpectedError(UnexpectedError value),
+    TResult serverException(ServerError value),
+    TResult cacheException(CacheError value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -2093,6 +2231,8 @@ class _$NotImplemented implements NotImplemented {
     @required TResult unableToProcess(),
     @required TResult defaultError(String error),
     @required TResult unexpectedError(),
+    @required TResult serverException(),
+    @required TResult cacheException(),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -2111,6 +2251,8 @@ class _$NotImplemented implements NotImplemented {
     assert(unableToProcess != null);
     assert(defaultError != null);
     assert(unexpectedError != null);
+    assert(serverException != null);
+    assert(cacheException != null);
     return notImplemented();
   }
 
@@ -2134,6 +2276,8 @@ class _$NotImplemented implements NotImplemented {
     TResult unableToProcess(),
     TResult defaultError(String error),
     TResult unexpectedError(),
+    TResult serverException(),
+    TResult cacheException(),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -2163,6 +2307,8 @@ class _$NotImplemented implements NotImplemented {
     @required TResult unableToProcess(UnableToProcess value),
     @required TResult defaultError(DefaultError value),
     @required TResult unexpectedError(UnexpectedError value),
+    @required TResult serverException(ServerError value),
+    @required TResult cacheException(CacheError value),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -2181,6 +2327,8 @@ class _$NotImplemented implements NotImplemented {
     assert(unableToProcess != null);
     assert(defaultError != null);
     assert(unexpectedError != null);
+    assert(serverException != null);
+    assert(cacheException != null);
     return notImplemented(this);
   }
 
@@ -2204,6 +2352,8 @@ class _$NotImplemented implements NotImplemented {
     TResult unableToProcess(UnableToProcess value),
     TResult defaultError(DefaultError value),
     TResult unexpectedError(UnexpectedError value),
+    TResult serverException(ServerError value),
+    TResult cacheException(CacheError value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -2274,6 +2424,8 @@ class _$ServiceUnavailable implements ServiceUnavailable {
     @required TResult unableToProcess(),
     @required TResult defaultError(String error),
     @required TResult unexpectedError(),
+    @required TResult serverException(),
+    @required TResult cacheException(),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -2292,6 +2444,8 @@ class _$ServiceUnavailable implements ServiceUnavailable {
     assert(unableToProcess != null);
     assert(defaultError != null);
     assert(unexpectedError != null);
+    assert(serverException != null);
+    assert(cacheException != null);
     return serviceUnavailable();
   }
 
@@ -2315,6 +2469,8 @@ class _$ServiceUnavailable implements ServiceUnavailable {
     TResult unableToProcess(),
     TResult defaultError(String error),
     TResult unexpectedError(),
+    TResult serverException(),
+    TResult cacheException(),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -2344,6 +2500,8 @@ class _$ServiceUnavailable implements ServiceUnavailable {
     @required TResult unableToProcess(UnableToProcess value),
     @required TResult defaultError(DefaultError value),
     @required TResult unexpectedError(UnexpectedError value),
+    @required TResult serverException(ServerError value),
+    @required TResult cacheException(CacheError value),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -2362,6 +2520,8 @@ class _$ServiceUnavailable implements ServiceUnavailable {
     assert(unableToProcess != null);
     assert(defaultError != null);
     assert(unexpectedError != null);
+    assert(serverException != null);
+    assert(cacheException != null);
     return serviceUnavailable(this);
   }
 
@@ -2385,6 +2545,8 @@ class _$ServiceUnavailable implements ServiceUnavailable {
     TResult unableToProcess(UnableToProcess value),
     TResult defaultError(DefaultError value),
     TResult unexpectedError(UnexpectedError value),
+    TResult serverException(ServerError value),
+    TResult cacheException(CacheError value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -2455,6 +2617,8 @@ class _$NoInternetConnection implements NoInternetConnection {
     @required TResult unableToProcess(),
     @required TResult defaultError(String error),
     @required TResult unexpectedError(),
+    @required TResult serverException(),
+    @required TResult cacheException(),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -2473,6 +2637,8 @@ class _$NoInternetConnection implements NoInternetConnection {
     assert(unableToProcess != null);
     assert(defaultError != null);
     assert(unexpectedError != null);
+    assert(serverException != null);
+    assert(cacheException != null);
     return noInternetConnection();
   }
 
@@ -2496,6 +2662,8 @@ class _$NoInternetConnection implements NoInternetConnection {
     TResult unableToProcess(),
     TResult defaultError(String error),
     TResult unexpectedError(),
+    TResult serverException(),
+    TResult cacheException(),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -2525,6 +2693,8 @@ class _$NoInternetConnection implements NoInternetConnection {
     @required TResult unableToProcess(UnableToProcess value),
     @required TResult defaultError(DefaultError value),
     @required TResult unexpectedError(UnexpectedError value),
+    @required TResult serverException(ServerError value),
+    @required TResult cacheException(CacheError value),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -2543,6 +2713,8 @@ class _$NoInternetConnection implements NoInternetConnection {
     assert(unableToProcess != null);
     assert(defaultError != null);
     assert(unexpectedError != null);
+    assert(serverException != null);
+    assert(cacheException != null);
     return noInternetConnection(this);
   }
 
@@ -2566,6 +2738,8 @@ class _$NoInternetConnection implements NoInternetConnection {
     TResult unableToProcess(UnableToProcess value),
     TResult defaultError(DefaultError value),
     TResult unexpectedError(UnexpectedError value),
+    TResult serverException(ServerError value),
+    TResult cacheException(CacheError value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -2636,6 +2810,8 @@ class _$FormatException implements FormatException {
     @required TResult unableToProcess(),
     @required TResult defaultError(String error),
     @required TResult unexpectedError(),
+    @required TResult serverException(),
+    @required TResult cacheException(),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -2654,6 +2830,8 @@ class _$FormatException implements FormatException {
     assert(unableToProcess != null);
     assert(defaultError != null);
     assert(unexpectedError != null);
+    assert(serverException != null);
+    assert(cacheException != null);
     return formatException();
   }
 
@@ -2677,6 +2855,8 @@ class _$FormatException implements FormatException {
     TResult unableToProcess(),
     TResult defaultError(String error),
     TResult unexpectedError(),
+    TResult serverException(),
+    TResult cacheException(),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -2706,6 +2886,8 @@ class _$FormatException implements FormatException {
     @required TResult unableToProcess(UnableToProcess value),
     @required TResult defaultError(DefaultError value),
     @required TResult unexpectedError(UnexpectedError value),
+    @required TResult serverException(ServerError value),
+    @required TResult cacheException(CacheError value),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -2724,6 +2906,8 @@ class _$FormatException implements FormatException {
     assert(unableToProcess != null);
     assert(defaultError != null);
     assert(unexpectedError != null);
+    assert(serverException != null);
+    assert(cacheException != null);
     return formatException(this);
   }
 
@@ -2747,6 +2931,8 @@ class _$FormatException implements FormatException {
     TResult unableToProcess(UnableToProcess value),
     TResult defaultError(DefaultError value),
     TResult unexpectedError(UnexpectedError value),
+    TResult serverException(ServerError value),
+    TResult cacheException(CacheError value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -2817,6 +3003,8 @@ class _$UnableToProcess implements UnableToProcess {
     @required TResult unableToProcess(),
     @required TResult defaultError(String error),
     @required TResult unexpectedError(),
+    @required TResult serverException(),
+    @required TResult cacheException(),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -2835,6 +3023,8 @@ class _$UnableToProcess implements UnableToProcess {
     assert(unableToProcess != null);
     assert(defaultError != null);
     assert(unexpectedError != null);
+    assert(serverException != null);
+    assert(cacheException != null);
     return unableToProcess();
   }
 
@@ -2858,6 +3048,8 @@ class _$UnableToProcess implements UnableToProcess {
     TResult unableToProcess(),
     TResult defaultError(String error),
     TResult unexpectedError(),
+    TResult serverException(),
+    TResult cacheException(),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -2887,6 +3079,8 @@ class _$UnableToProcess implements UnableToProcess {
     @required TResult unableToProcess(UnableToProcess value),
     @required TResult defaultError(DefaultError value),
     @required TResult unexpectedError(UnexpectedError value),
+    @required TResult serverException(ServerError value),
+    @required TResult cacheException(CacheError value),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -2905,6 +3099,8 @@ class _$UnableToProcess implements UnableToProcess {
     assert(unableToProcess != null);
     assert(defaultError != null);
     assert(unexpectedError != null);
+    assert(serverException != null);
+    assert(cacheException != null);
     return unableToProcess(this);
   }
 
@@ -2928,6 +3124,8 @@ class _$UnableToProcess implements UnableToProcess {
     TResult unableToProcess(UnableToProcess value),
     TResult defaultError(DefaultError value),
     TResult unexpectedError(UnexpectedError value),
+    TResult serverException(ServerError value),
+    TResult cacheException(CacheError value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -3019,6 +3217,8 @@ class _$DefaultError implements DefaultError {
     @required TResult unableToProcess(),
     @required TResult defaultError(String error),
     @required TResult unexpectedError(),
+    @required TResult serverException(),
+    @required TResult cacheException(),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -3037,6 +3237,8 @@ class _$DefaultError implements DefaultError {
     assert(unableToProcess != null);
     assert(defaultError != null);
     assert(unexpectedError != null);
+    assert(serverException != null);
+    assert(cacheException != null);
     return defaultError(error);
   }
 
@@ -3060,6 +3262,8 @@ class _$DefaultError implements DefaultError {
     TResult unableToProcess(),
     TResult defaultError(String error),
     TResult unexpectedError(),
+    TResult serverException(),
+    TResult cacheException(),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -3089,6 +3293,8 @@ class _$DefaultError implements DefaultError {
     @required TResult unableToProcess(UnableToProcess value),
     @required TResult defaultError(DefaultError value),
     @required TResult unexpectedError(UnexpectedError value),
+    @required TResult serverException(ServerError value),
+    @required TResult cacheException(CacheError value),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -3107,6 +3313,8 @@ class _$DefaultError implements DefaultError {
     assert(unableToProcess != null);
     assert(defaultError != null);
     assert(unexpectedError != null);
+    assert(serverException != null);
+    assert(cacheException != null);
     return defaultError(this);
   }
 
@@ -3130,6 +3338,8 @@ class _$DefaultError implements DefaultError {
     TResult unableToProcess(UnableToProcess value),
     TResult defaultError(DefaultError value),
     TResult unexpectedError(UnexpectedError value),
+    TResult serverException(ServerError value),
+    TResult cacheException(CacheError value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -3203,6 +3413,8 @@ class _$UnexpectedError implements UnexpectedError {
     @required TResult unableToProcess(),
     @required TResult defaultError(String error),
     @required TResult unexpectedError(),
+    @required TResult serverException(),
+    @required TResult cacheException(),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -3221,6 +3433,8 @@ class _$UnexpectedError implements UnexpectedError {
     assert(unableToProcess != null);
     assert(defaultError != null);
     assert(unexpectedError != null);
+    assert(serverException != null);
+    assert(cacheException != null);
     return unexpectedError();
   }
 
@@ -3244,6 +3458,8 @@ class _$UnexpectedError implements UnexpectedError {
     TResult unableToProcess(),
     TResult defaultError(String error),
     TResult unexpectedError(),
+    TResult serverException(),
+    TResult cacheException(),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -3273,6 +3489,8 @@ class _$UnexpectedError implements UnexpectedError {
     @required TResult unableToProcess(UnableToProcess value),
     @required TResult defaultError(DefaultError value),
     @required TResult unexpectedError(UnexpectedError value),
+    @required TResult serverException(ServerError value),
+    @required TResult cacheException(CacheError value),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -3291,6 +3509,8 @@ class _$UnexpectedError implements UnexpectedError {
     assert(unableToProcess != null);
     assert(defaultError != null);
     assert(unexpectedError != null);
+    assert(serverException != null);
+    assert(cacheException != null);
     return unexpectedError(this);
   }
 
@@ -3314,6 +3534,8 @@ class _$UnexpectedError implements UnexpectedError {
     TResult unableToProcess(UnableToProcess value),
     TResult defaultError(DefaultError value),
     TResult unexpectedError(UnexpectedError value),
+    TResult serverException(ServerError value),
+    TResult cacheException(CacheError value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -3326,4 +3548,389 @@ class _$UnexpectedError implements UnexpectedError {
 
 abstract class UnexpectedError implements NetworkExceptions {
   const factory UnexpectedError() = _$UnexpectedError;
+}
+
+/// @nodoc
+abstract class $ServerErrorCopyWith<$Res> {
+  factory $ServerErrorCopyWith(
+          ServerError value, $Res Function(ServerError) then) =
+      _$ServerErrorCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$ServerErrorCopyWithImpl<$Res>
+    extends _$NetworkExceptionsCopyWithImpl<$Res>
+    implements $ServerErrorCopyWith<$Res> {
+  _$ServerErrorCopyWithImpl(
+      ServerError _value, $Res Function(ServerError) _then)
+      : super(_value, (v) => _then(v as ServerError));
+
+  @override
+  ServerError get _value => super._value as ServerError;
+}
+
+/// @nodoc
+class _$ServerError implements ServerError {
+  const _$ServerError();
+
+  @override
+  String toString() {
+    return 'NetworkExceptions.serverException()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is ServerError);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object>({
+    @required TResult requestCancelled(),
+    @required TResult unauthorisedRequest(),
+    @required TResult badRequest(),
+    @required TResult notFound(String reason),
+    @required TResult methodNotAllowed(),
+    @required TResult notAcceptable(),
+    @required TResult requestTimeout(),
+    @required TResult sendTimeout(),
+    @required TResult conflict(),
+    @required TResult internalServerError(),
+    @required TResult notImplemented(),
+    @required TResult serviceUnavailable(),
+    @required TResult noInternetConnection(),
+    @required TResult formatException(),
+    @required TResult unableToProcess(),
+    @required TResult defaultError(String error),
+    @required TResult unexpectedError(),
+    @required TResult serverException(),
+    @required TResult cacheException(),
+  }) {
+    assert(requestCancelled != null);
+    assert(unauthorisedRequest != null);
+    assert(badRequest != null);
+    assert(notFound != null);
+    assert(methodNotAllowed != null);
+    assert(notAcceptable != null);
+    assert(requestTimeout != null);
+    assert(sendTimeout != null);
+    assert(conflict != null);
+    assert(internalServerError != null);
+    assert(notImplemented != null);
+    assert(serviceUnavailable != null);
+    assert(noInternetConnection != null);
+    assert(formatException != null);
+    assert(unableToProcess != null);
+    assert(defaultError != null);
+    assert(unexpectedError != null);
+    assert(serverException != null);
+    assert(cacheException != null);
+    return serverException();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object>({
+    TResult requestCancelled(),
+    TResult unauthorisedRequest(),
+    TResult badRequest(),
+    TResult notFound(String reason),
+    TResult methodNotAllowed(),
+    TResult notAcceptable(),
+    TResult requestTimeout(),
+    TResult sendTimeout(),
+    TResult conflict(),
+    TResult internalServerError(),
+    TResult notImplemented(),
+    TResult serviceUnavailable(),
+    TResult noInternetConnection(),
+    TResult formatException(),
+    TResult unableToProcess(),
+    TResult defaultError(String error),
+    TResult unexpectedError(),
+    TResult serverException(),
+    TResult cacheException(),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (serverException != null) {
+      return serverException();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object>({
+    @required TResult requestCancelled(RequestCancelled value),
+    @required TResult unauthorisedRequest(UnauthorisedRequest value),
+    @required TResult badRequest(BadRequest value),
+    @required TResult notFound(NotFound value),
+    @required TResult methodNotAllowed(MethodNotAllowed value),
+    @required TResult notAcceptable(NotAcceptable value),
+    @required TResult requestTimeout(RequestTimeout value),
+    @required TResult sendTimeout(SendTimeout value),
+    @required TResult conflict(Conflict value),
+    @required TResult internalServerError(InternalServerError value),
+    @required TResult notImplemented(NotImplemented value),
+    @required TResult serviceUnavailable(ServiceUnavailable value),
+    @required TResult noInternetConnection(NoInternetConnection value),
+    @required TResult formatException(FormatException value),
+    @required TResult unableToProcess(UnableToProcess value),
+    @required TResult defaultError(DefaultError value),
+    @required TResult unexpectedError(UnexpectedError value),
+    @required TResult serverException(ServerError value),
+    @required TResult cacheException(CacheError value),
+  }) {
+    assert(requestCancelled != null);
+    assert(unauthorisedRequest != null);
+    assert(badRequest != null);
+    assert(notFound != null);
+    assert(methodNotAllowed != null);
+    assert(notAcceptable != null);
+    assert(requestTimeout != null);
+    assert(sendTimeout != null);
+    assert(conflict != null);
+    assert(internalServerError != null);
+    assert(notImplemented != null);
+    assert(serviceUnavailable != null);
+    assert(noInternetConnection != null);
+    assert(formatException != null);
+    assert(unableToProcess != null);
+    assert(defaultError != null);
+    assert(unexpectedError != null);
+    assert(serverException != null);
+    assert(cacheException != null);
+    return serverException(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object>({
+    TResult requestCancelled(RequestCancelled value),
+    TResult unauthorisedRequest(UnauthorisedRequest value),
+    TResult badRequest(BadRequest value),
+    TResult notFound(NotFound value),
+    TResult methodNotAllowed(MethodNotAllowed value),
+    TResult notAcceptable(NotAcceptable value),
+    TResult requestTimeout(RequestTimeout value),
+    TResult sendTimeout(SendTimeout value),
+    TResult conflict(Conflict value),
+    TResult internalServerError(InternalServerError value),
+    TResult notImplemented(NotImplemented value),
+    TResult serviceUnavailable(ServiceUnavailable value),
+    TResult noInternetConnection(NoInternetConnection value),
+    TResult formatException(FormatException value),
+    TResult unableToProcess(UnableToProcess value),
+    TResult defaultError(DefaultError value),
+    TResult unexpectedError(UnexpectedError value),
+    TResult serverException(ServerError value),
+    TResult cacheException(CacheError value),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (serverException != null) {
+      return serverException(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ServerError implements NetworkExceptions {
+  const factory ServerError() = _$ServerError;
+}
+
+/// @nodoc
+abstract class $CacheErrorCopyWith<$Res> {
+  factory $CacheErrorCopyWith(
+          CacheError value, $Res Function(CacheError) then) =
+      _$CacheErrorCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$CacheErrorCopyWithImpl<$Res>
+    extends _$NetworkExceptionsCopyWithImpl<$Res>
+    implements $CacheErrorCopyWith<$Res> {
+  _$CacheErrorCopyWithImpl(CacheError _value, $Res Function(CacheError) _then)
+      : super(_value, (v) => _then(v as CacheError));
+
+  @override
+  CacheError get _value => super._value as CacheError;
+}
+
+/// @nodoc
+class _$CacheError implements CacheError {
+  const _$CacheError();
+
+  @override
+  String toString() {
+    return 'NetworkExceptions.cacheException()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is CacheError);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object>({
+    @required TResult requestCancelled(),
+    @required TResult unauthorisedRequest(),
+    @required TResult badRequest(),
+    @required TResult notFound(String reason),
+    @required TResult methodNotAllowed(),
+    @required TResult notAcceptable(),
+    @required TResult requestTimeout(),
+    @required TResult sendTimeout(),
+    @required TResult conflict(),
+    @required TResult internalServerError(),
+    @required TResult notImplemented(),
+    @required TResult serviceUnavailable(),
+    @required TResult noInternetConnection(),
+    @required TResult formatException(),
+    @required TResult unableToProcess(),
+    @required TResult defaultError(String error),
+    @required TResult unexpectedError(),
+    @required TResult serverException(),
+    @required TResult cacheException(),
+  }) {
+    assert(requestCancelled != null);
+    assert(unauthorisedRequest != null);
+    assert(badRequest != null);
+    assert(notFound != null);
+    assert(methodNotAllowed != null);
+    assert(notAcceptable != null);
+    assert(requestTimeout != null);
+    assert(sendTimeout != null);
+    assert(conflict != null);
+    assert(internalServerError != null);
+    assert(notImplemented != null);
+    assert(serviceUnavailable != null);
+    assert(noInternetConnection != null);
+    assert(formatException != null);
+    assert(unableToProcess != null);
+    assert(defaultError != null);
+    assert(unexpectedError != null);
+    assert(serverException != null);
+    assert(cacheException != null);
+    return cacheException();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object>({
+    TResult requestCancelled(),
+    TResult unauthorisedRequest(),
+    TResult badRequest(),
+    TResult notFound(String reason),
+    TResult methodNotAllowed(),
+    TResult notAcceptable(),
+    TResult requestTimeout(),
+    TResult sendTimeout(),
+    TResult conflict(),
+    TResult internalServerError(),
+    TResult notImplemented(),
+    TResult serviceUnavailable(),
+    TResult noInternetConnection(),
+    TResult formatException(),
+    TResult unableToProcess(),
+    TResult defaultError(String error),
+    TResult unexpectedError(),
+    TResult serverException(),
+    TResult cacheException(),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (cacheException != null) {
+      return cacheException();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object>({
+    @required TResult requestCancelled(RequestCancelled value),
+    @required TResult unauthorisedRequest(UnauthorisedRequest value),
+    @required TResult badRequest(BadRequest value),
+    @required TResult notFound(NotFound value),
+    @required TResult methodNotAllowed(MethodNotAllowed value),
+    @required TResult notAcceptable(NotAcceptable value),
+    @required TResult requestTimeout(RequestTimeout value),
+    @required TResult sendTimeout(SendTimeout value),
+    @required TResult conflict(Conflict value),
+    @required TResult internalServerError(InternalServerError value),
+    @required TResult notImplemented(NotImplemented value),
+    @required TResult serviceUnavailable(ServiceUnavailable value),
+    @required TResult noInternetConnection(NoInternetConnection value),
+    @required TResult formatException(FormatException value),
+    @required TResult unableToProcess(UnableToProcess value),
+    @required TResult defaultError(DefaultError value),
+    @required TResult unexpectedError(UnexpectedError value),
+    @required TResult serverException(ServerError value),
+    @required TResult cacheException(CacheError value),
+  }) {
+    assert(requestCancelled != null);
+    assert(unauthorisedRequest != null);
+    assert(badRequest != null);
+    assert(notFound != null);
+    assert(methodNotAllowed != null);
+    assert(notAcceptable != null);
+    assert(requestTimeout != null);
+    assert(sendTimeout != null);
+    assert(conflict != null);
+    assert(internalServerError != null);
+    assert(notImplemented != null);
+    assert(serviceUnavailable != null);
+    assert(noInternetConnection != null);
+    assert(formatException != null);
+    assert(unableToProcess != null);
+    assert(defaultError != null);
+    assert(unexpectedError != null);
+    assert(serverException != null);
+    assert(cacheException != null);
+    return cacheException(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object>({
+    TResult requestCancelled(RequestCancelled value),
+    TResult unauthorisedRequest(UnauthorisedRequest value),
+    TResult badRequest(BadRequest value),
+    TResult notFound(NotFound value),
+    TResult methodNotAllowed(MethodNotAllowed value),
+    TResult notAcceptable(NotAcceptable value),
+    TResult requestTimeout(RequestTimeout value),
+    TResult sendTimeout(SendTimeout value),
+    TResult conflict(Conflict value),
+    TResult internalServerError(InternalServerError value),
+    TResult notImplemented(NotImplemented value),
+    TResult serviceUnavailable(ServiceUnavailable value),
+    TResult noInternetConnection(NoInternetConnection value),
+    TResult formatException(FormatException value),
+    TResult unableToProcess(UnableToProcess value),
+    TResult defaultError(DefaultError value),
+    TResult unexpectedError(UnexpectedError value),
+    TResult serverException(ServerError value),
+    TResult cacheException(CacheError value),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (cacheException != null) {
+      return cacheException(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class CacheError implements NetworkExceptions {
+  const factory CacheError() = _$CacheError;
 }

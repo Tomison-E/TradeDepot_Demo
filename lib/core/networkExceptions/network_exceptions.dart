@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:dio/dio.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:tradedepot_demo/core/error/exceptions.dart';
 
 part 'network_exceptions.freezed.dart';
 
@@ -40,6 +41,10 @@ abstract class NetworkExceptions with _$NetworkExceptions {
   const factory NetworkExceptions.defaultError(String error) = DefaultError;
 
   const factory NetworkExceptions.unexpectedError() = UnexpectedError;
+
+  const factory NetworkExceptions.serverException() = ServerError;
+
+  const factory NetworkExceptions.cacheException() = CacheError;
 
   static NetworkExceptions getDioException(error) {
     if (error is Exception) {
@@ -98,7 +103,12 @@ abstract class NetworkExceptions with _$NetworkExceptions {
           }
         } else if (error is SocketException) {
           networkExceptions = NetworkExceptions.noInternetConnection();
-        } else {
+        } else if (error is ServerException) {
+          networkExceptions = NetworkExceptions.serverException();
+        } else if (error is CacheException) {
+          networkExceptions = NetworkExceptions.cacheException();
+        }
+        else {
           networkExceptions = NetworkExceptions.unexpectedError();
         }
         return networkExceptions;
@@ -151,6 +161,10 @@ abstract class NetworkExceptions with _$NetworkExceptions {
       errorMessage = error;
     }, formatException: () {
       errorMessage = "Unexpected error occurred";
+    },serverException: () {
+      errorMessage = "Unexpected error occurred trying to connect with server";
+    },cacheException: () {
+      errorMessage = "Unexpected error occurred trying to access local storage";
     }, notAcceptable: () {
       errorMessage = "Not acceptable";
     });

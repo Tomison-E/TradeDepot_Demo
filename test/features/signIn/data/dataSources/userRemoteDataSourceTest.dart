@@ -1,3 +1,4 @@
+/*
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_riverpod/all.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -44,4 +45,4 @@ import 'package:tradedepot_demo/core/services/firebase/authentication.dart';
        expect(()async=> await container.read(userRemoteDataProvider).signIn("", "wrong Password"), throwsA(FirebaseAuthException(message: "Invalid Email")));
      });
    });
- }
+ }*/

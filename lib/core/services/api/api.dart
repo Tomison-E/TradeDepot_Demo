@@ -1,29 +1,28 @@
 import 'dart:io';
 
 import 'package:dio/dio.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter/foundation.dart';
 
-final dioProvider = Provider((ref) => Dio());
-final apiProvider = Provider((ref) => ApiClient(ref.read,""));
+//final dioProvider = Provider((ref) => Dio());
+/*final apiProvider = Provider((ref) => ApiClient(ref.read,""));*/
 
 const _defaultConnectTimeout = Duration.millisecondsPerMinute;
 const _defaultReceiveTimeout = Duration.millisecondsPerMinute;
 
 class ApiClient {
 
-  ApiClient(this._read, this.baseUrl,{ this.interceptors}){
-    _read(dioProvider)
+  ApiClient(this.dio, this.baseUrl,{ this.interceptors}){
+    dio
       ..options.baseUrl = baseUrl
       ..options.connectTimeout = _defaultConnectTimeout
       ..options.receiveTimeout = _defaultReceiveTimeout
       ..httpClientAdapter
       ..options.headers = {'Content-Type': 'application/json; charset=UTF-8'};
     if (interceptors?.isNotEmpty ?? false) {
-      _read(dioProvider).interceptors.addAll(interceptors);
+      dio.interceptors.addAll(interceptors);
     }
     if (kDebugMode) {
-      _read(dioProvider).interceptors.add(LogInterceptor(
+      dio.interceptors.add(LogInterceptor(
           responseBody: true,
           error: true,
           requestHeader: false,
@@ -33,7 +32,7 @@ class ApiClient {
     }
   }
 
-  final Reader _read;
+  final Dio dio;
   final String baseUrl;
   final List<Interceptor> interceptors;
 
@@ -46,7 +45,7 @@ class ApiClient {
     ProgressCallback onReceiveProgress,
   }) async{
     try {
-      final res = await _read(dioProvider).get("$url", queryParameters: queryParameters,
+      final res = await dio.get("$url", queryParameters: queryParameters,
         options: options,
         cancelToken: cancelToken,
         onReceiveProgress: onReceiveProgress,
@@ -74,7 +73,7 @@ class ApiClient {
         ProgressCallback onReceiveProgress,
       }) async {
     try {
-      var response = await _read(dioProvider).post(
+      var response = await dio.post(
         uri,
         data: data,
         queryParameters: queryParameters,

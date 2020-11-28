@@ -1,11 +1,7 @@
-
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:tradedepot_demo/core/networkResponse/api_result.dart';
 
 
-final authenticationProvider = Provider<AuthenticationService>((ref) => Authentication(ref.read));
-final fireBaseAuthProvider = Provider((ref) => FirebaseAuth.instance);
+
 
 abstract class AuthenticationService {
   Future<bool> createUser(String email, String password);
@@ -13,15 +9,15 @@ abstract class AuthenticationService {
 }
 
 class Authentication implements AuthenticationService{
- Authentication(this._read,{this.url = ""});
+ Authentication(this._authInstance,{this.url = ""});
 
- final Reader _read;
+ final _authInstance ;
  final String url;
 
 
  Future<bool> createUser(String email, String password) async {
    try {
-     UserCredential userCredential = await _read(fireBaseAuthProvider).createUserWithEmailAndPassword(
+     UserCredential userCredential = await _authInstance.createUserWithEmailAndPassword(
          email: email,
          password: password
      );
@@ -35,7 +31,7 @@ class Authentication implements AuthenticationService{
 
  Future<bool> signIn(String email, String password) async{
    try {
-     UserCredential userCredential = await _read(fireBaseAuthProvider).signInWithEmailAndPassword(
+     UserCredential userCredential = await _authInstance.signInWithEmailAndPassword(
          email: email,
          password: password
      );
