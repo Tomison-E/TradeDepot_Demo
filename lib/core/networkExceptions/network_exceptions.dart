@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:dio/dio.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:tradedepot_demo/core/error/exceptions.dart';
 
@@ -45,6 +46,8 @@ abstract class NetworkExceptions with _$NetworkExceptions {
   const factory NetworkExceptions.serverException() = ServerError;
 
   const factory NetworkExceptions.cacheException() = CacheError;
+
+  const factory NetworkExceptions.fireBaseAuthException(String error) = FireBaseAuthError;
 
   static NetworkExceptions getDioException(error) {
     if (error is Exception) {
@@ -107,15 +110,18 @@ abstract class NetworkExceptions with _$NetworkExceptions {
           networkExceptions = NetworkExceptions.serverException();
         } else if (error is CacheException) {
           networkExceptions = NetworkExceptions.cacheException();
+        } else if (error is FirebaseAuthException) {
+          networkExceptions = NetworkExceptions.fireBaseAuthException(error.message);
         }
         else {
           networkExceptions = NetworkExceptions.unexpectedError();
         }
         return networkExceptions;
-      } on FormatException catch (e) {
+      } on FormatException {
         // Helper.printError(e.toString());
         return NetworkExceptions.formatException();
-      } catch (_) {
+      }
+      catch (_) {
         return NetworkExceptions.unexpectedError();
       }
     } else {
@@ -167,6 +173,8 @@ abstract class NetworkExceptions with _$NetworkExceptions {
       errorMessage = "Unexpected error occurred trying to access local storage";
     }, notAcceptable: () {
       errorMessage = "Not acceptable";
+    }, fireBaseAuthException: (String error) {
+      errorMessage = error;
     });
     return errorMessage;
   }

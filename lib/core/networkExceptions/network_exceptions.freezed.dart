@@ -111,6 +111,13 @@ class _$NetworkExceptionsTearOff {
   CacheError cacheException() {
     return const CacheError();
   }
+
+// ignore: unused_element
+  FireBaseAuthError fireBaseAuthException(String error) {
+    return FireBaseAuthError(
+      error,
+    );
+  }
 }
 
 /// @nodoc
@@ -140,6 +147,7 @@ mixin _$NetworkExceptions {
     @required TResult unexpectedError(),
     @required TResult serverException(),
     @required TResult cacheException(),
+    @required TResult fireBaseAuthException(String error),
   });
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object>({
@@ -162,6 +170,7 @@ mixin _$NetworkExceptions {
     TResult unexpectedError(),
     TResult serverException(),
     TResult cacheException(),
+    TResult fireBaseAuthException(String error),
     @required TResult orElse(),
   });
   @optionalTypeArgs
@@ -185,6 +194,7 @@ mixin _$NetworkExceptions {
     @required TResult unexpectedError(UnexpectedError value),
     @required TResult serverException(ServerError value),
     @required TResult cacheException(CacheError value),
+    @required TResult fireBaseAuthException(FireBaseAuthError value),
   });
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object>({
@@ -207,6 +217,7 @@ mixin _$NetworkExceptions {
     TResult unexpectedError(UnexpectedError value),
     TResult serverException(ServerError value),
     TResult cacheException(CacheError value),
+    TResult fireBaseAuthException(FireBaseAuthError value),
     @required TResult orElse(),
   });
 }
@@ -286,6 +297,7 @@ class _$RequestCancelled implements RequestCancelled {
     @required TResult unexpectedError(),
     @required TResult serverException(),
     @required TResult cacheException(),
+    @required TResult fireBaseAuthException(String error),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -306,6 +318,7 @@ class _$RequestCancelled implements RequestCancelled {
     assert(unexpectedError != null);
     assert(serverException != null);
     assert(cacheException != null);
+    assert(fireBaseAuthException != null);
     return requestCancelled();
   }
 
@@ -331,6 +344,7 @@ class _$RequestCancelled implements RequestCancelled {
     TResult unexpectedError(),
     TResult serverException(),
     TResult cacheException(),
+    TResult fireBaseAuthException(String error),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -362,6 +376,7 @@ class _$RequestCancelled implements RequestCancelled {
     @required TResult unexpectedError(UnexpectedError value),
     @required TResult serverException(ServerError value),
     @required TResult cacheException(CacheError value),
+    @required TResult fireBaseAuthException(FireBaseAuthError value),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -382,6 +397,7 @@ class _$RequestCancelled implements RequestCancelled {
     assert(unexpectedError != null);
     assert(serverException != null);
     assert(cacheException != null);
+    assert(fireBaseAuthException != null);
     return requestCancelled(this);
   }
 
@@ -407,6 +423,7 @@ class _$RequestCancelled implements RequestCancelled {
     TResult unexpectedError(UnexpectedError value),
     TResult serverException(ServerError value),
     TResult cacheException(CacheError value),
+    TResult fireBaseAuthException(FireBaseAuthError value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -479,6 +496,7 @@ class _$UnauthorisedRequest implements UnauthorisedRequest {
     @required TResult unexpectedError(),
     @required TResult serverException(),
     @required TResult cacheException(),
+    @required TResult fireBaseAuthException(String error),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -499,6 +517,7 @@ class _$UnauthorisedRequest implements UnauthorisedRequest {
     assert(unexpectedError != null);
     assert(serverException != null);
     assert(cacheException != null);
+    assert(fireBaseAuthException != null);
     return unauthorisedRequest();
   }
 
@@ -524,6 +543,7 @@ class _$UnauthorisedRequest implements UnauthorisedRequest {
     TResult unexpectedError(),
     TResult serverException(),
     TResult cacheException(),
+    TResult fireBaseAuthException(String error),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -555,6 +575,7 @@ class _$UnauthorisedRequest implements UnauthorisedRequest {
     @required TResult unexpectedError(UnexpectedError value),
     @required TResult serverException(ServerError value),
     @required TResult cacheException(CacheError value),
+    @required TResult fireBaseAuthException(FireBaseAuthError value),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -575,6 +596,7 @@ class _$UnauthorisedRequest implements UnauthorisedRequest {
     assert(unexpectedError != null);
     assert(serverException != null);
     assert(cacheException != null);
+    assert(fireBaseAuthException != null);
     return unauthorisedRequest(this);
   }
 
@@ -600,6 +622,7 @@ class _$UnauthorisedRequest implements UnauthorisedRequest {
     TResult unexpectedError(UnexpectedError value),
     TResult serverException(ServerError value),
     TResult cacheException(CacheError value),
+    TResult fireBaseAuthException(FireBaseAuthError value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -671,6 +694,7 @@ class _$BadRequest implements BadRequest {
     @required TResult unexpectedError(),
     @required TResult serverException(),
     @required TResult cacheException(),
+    @required TResult fireBaseAuthException(String error),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -691,6 +715,7 @@ class _$BadRequest implements BadRequest {
     assert(unexpectedError != null);
     assert(serverException != null);
     assert(cacheException != null);
+    assert(fireBaseAuthException != null);
     return badRequest();
   }
 
@@ -716,6 +741,7 @@ class _$BadRequest implements BadRequest {
     TResult unexpectedError(),
     TResult serverException(),
     TResult cacheException(),
+    TResult fireBaseAuthException(String error),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -747,6 +773,7 @@ class _$BadRequest implements BadRequest {
     @required TResult unexpectedError(UnexpectedError value),
     @required TResult serverException(ServerError value),
     @required TResult cacheException(CacheError value),
+    @required TResult fireBaseAuthException(FireBaseAuthError value),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -767,6 +794,7 @@ class _$BadRequest implements BadRequest {
     assert(unexpectedError != null);
     assert(serverException != null);
     assert(cacheException != null);
+    assert(fireBaseAuthException != null);
     return badRequest(this);
   }
 
@@ -792,6 +820,7 @@ class _$BadRequest implements BadRequest {
     TResult unexpectedError(UnexpectedError value),
     TResult serverException(ServerError value),
     TResult cacheException(CacheError value),
+    TResult fireBaseAuthException(FireBaseAuthError value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -882,6 +911,7 @@ class _$NotFound implements NotFound {
     @required TResult unexpectedError(),
     @required TResult serverException(),
     @required TResult cacheException(),
+    @required TResult fireBaseAuthException(String error),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -902,6 +932,7 @@ class _$NotFound implements NotFound {
     assert(unexpectedError != null);
     assert(serverException != null);
     assert(cacheException != null);
+    assert(fireBaseAuthException != null);
     return notFound(reason);
   }
 
@@ -927,6 +958,7 @@ class _$NotFound implements NotFound {
     TResult unexpectedError(),
     TResult serverException(),
     TResult cacheException(),
+    TResult fireBaseAuthException(String error),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -958,6 +990,7 @@ class _$NotFound implements NotFound {
     @required TResult unexpectedError(UnexpectedError value),
     @required TResult serverException(ServerError value),
     @required TResult cacheException(CacheError value),
+    @required TResult fireBaseAuthException(FireBaseAuthError value),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -978,6 +1011,7 @@ class _$NotFound implements NotFound {
     assert(unexpectedError != null);
     assert(serverException != null);
     assert(cacheException != null);
+    assert(fireBaseAuthException != null);
     return notFound(this);
   }
 
@@ -1003,6 +1037,7 @@ class _$NotFound implements NotFound {
     TResult unexpectedError(UnexpectedError value),
     TResult serverException(ServerError value),
     TResult cacheException(CacheError value),
+    TResult fireBaseAuthException(FireBaseAuthError value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -1078,6 +1113,7 @@ class _$MethodNotAllowed implements MethodNotAllowed {
     @required TResult unexpectedError(),
     @required TResult serverException(),
     @required TResult cacheException(),
+    @required TResult fireBaseAuthException(String error),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -1098,6 +1134,7 @@ class _$MethodNotAllowed implements MethodNotAllowed {
     assert(unexpectedError != null);
     assert(serverException != null);
     assert(cacheException != null);
+    assert(fireBaseAuthException != null);
     return methodNotAllowed();
   }
 
@@ -1123,6 +1160,7 @@ class _$MethodNotAllowed implements MethodNotAllowed {
     TResult unexpectedError(),
     TResult serverException(),
     TResult cacheException(),
+    TResult fireBaseAuthException(String error),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -1154,6 +1192,7 @@ class _$MethodNotAllowed implements MethodNotAllowed {
     @required TResult unexpectedError(UnexpectedError value),
     @required TResult serverException(ServerError value),
     @required TResult cacheException(CacheError value),
+    @required TResult fireBaseAuthException(FireBaseAuthError value),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -1174,6 +1213,7 @@ class _$MethodNotAllowed implements MethodNotAllowed {
     assert(unexpectedError != null);
     assert(serverException != null);
     assert(cacheException != null);
+    assert(fireBaseAuthException != null);
     return methodNotAllowed(this);
   }
 
@@ -1199,6 +1239,7 @@ class _$MethodNotAllowed implements MethodNotAllowed {
     TResult unexpectedError(UnexpectedError value),
     TResult serverException(ServerError value),
     TResult cacheException(CacheError value),
+    TResult fireBaseAuthException(FireBaseAuthError value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -1271,6 +1312,7 @@ class _$NotAcceptable implements NotAcceptable {
     @required TResult unexpectedError(),
     @required TResult serverException(),
     @required TResult cacheException(),
+    @required TResult fireBaseAuthException(String error),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -1291,6 +1333,7 @@ class _$NotAcceptable implements NotAcceptable {
     assert(unexpectedError != null);
     assert(serverException != null);
     assert(cacheException != null);
+    assert(fireBaseAuthException != null);
     return notAcceptable();
   }
 
@@ -1316,6 +1359,7 @@ class _$NotAcceptable implements NotAcceptable {
     TResult unexpectedError(),
     TResult serverException(),
     TResult cacheException(),
+    TResult fireBaseAuthException(String error),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -1347,6 +1391,7 @@ class _$NotAcceptable implements NotAcceptable {
     @required TResult unexpectedError(UnexpectedError value),
     @required TResult serverException(ServerError value),
     @required TResult cacheException(CacheError value),
+    @required TResult fireBaseAuthException(FireBaseAuthError value),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -1367,6 +1412,7 @@ class _$NotAcceptable implements NotAcceptable {
     assert(unexpectedError != null);
     assert(serverException != null);
     assert(cacheException != null);
+    assert(fireBaseAuthException != null);
     return notAcceptable(this);
   }
 
@@ -1392,6 +1438,7 @@ class _$NotAcceptable implements NotAcceptable {
     TResult unexpectedError(UnexpectedError value),
     TResult serverException(ServerError value),
     TResult cacheException(CacheError value),
+    TResult fireBaseAuthException(FireBaseAuthError value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -1464,6 +1511,7 @@ class _$RequestTimeout implements RequestTimeout {
     @required TResult unexpectedError(),
     @required TResult serverException(),
     @required TResult cacheException(),
+    @required TResult fireBaseAuthException(String error),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -1484,6 +1532,7 @@ class _$RequestTimeout implements RequestTimeout {
     assert(unexpectedError != null);
     assert(serverException != null);
     assert(cacheException != null);
+    assert(fireBaseAuthException != null);
     return requestTimeout();
   }
 
@@ -1509,6 +1558,7 @@ class _$RequestTimeout implements RequestTimeout {
     TResult unexpectedError(),
     TResult serverException(),
     TResult cacheException(),
+    TResult fireBaseAuthException(String error),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -1540,6 +1590,7 @@ class _$RequestTimeout implements RequestTimeout {
     @required TResult unexpectedError(UnexpectedError value),
     @required TResult serverException(ServerError value),
     @required TResult cacheException(CacheError value),
+    @required TResult fireBaseAuthException(FireBaseAuthError value),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -1560,6 +1611,7 @@ class _$RequestTimeout implements RequestTimeout {
     assert(unexpectedError != null);
     assert(serverException != null);
     assert(cacheException != null);
+    assert(fireBaseAuthException != null);
     return requestTimeout(this);
   }
 
@@ -1585,6 +1637,7 @@ class _$RequestTimeout implements RequestTimeout {
     TResult unexpectedError(UnexpectedError value),
     TResult serverException(ServerError value),
     TResult cacheException(CacheError value),
+    TResult fireBaseAuthException(FireBaseAuthError value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -1657,6 +1710,7 @@ class _$SendTimeout implements SendTimeout {
     @required TResult unexpectedError(),
     @required TResult serverException(),
     @required TResult cacheException(),
+    @required TResult fireBaseAuthException(String error),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -1677,6 +1731,7 @@ class _$SendTimeout implements SendTimeout {
     assert(unexpectedError != null);
     assert(serverException != null);
     assert(cacheException != null);
+    assert(fireBaseAuthException != null);
     return sendTimeout();
   }
 
@@ -1702,6 +1757,7 @@ class _$SendTimeout implements SendTimeout {
     TResult unexpectedError(),
     TResult serverException(),
     TResult cacheException(),
+    TResult fireBaseAuthException(String error),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -1733,6 +1789,7 @@ class _$SendTimeout implements SendTimeout {
     @required TResult unexpectedError(UnexpectedError value),
     @required TResult serverException(ServerError value),
     @required TResult cacheException(CacheError value),
+    @required TResult fireBaseAuthException(FireBaseAuthError value),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -1753,6 +1810,7 @@ class _$SendTimeout implements SendTimeout {
     assert(unexpectedError != null);
     assert(serverException != null);
     assert(cacheException != null);
+    assert(fireBaseAuthException != null);
     return sendTimeout(this);
   }
 
@@ -1778,6 +1836,7 @@ class _$SendTimeout implements SendTimeout {
     TResult unexpectedError(UnexpectedError value),
     TResult serverException(ServerError value),
     TResult cacheException(CacheError value),
+    TResult fireBaseAuthException(FireBaseAuthError value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -1847,6 +1906,7 @@ class _$Conflict implements Conflict {
     @required TResult unexpectedError(),
     @required TResult serverException(),
     @required TResult cacheException(),
+    @required TResult fireBaseAuthException(String error),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -1867,6 +1927,7 @@ class _$Conflict implements Conflict {
     assert(unexpectedError != null);
     assert(serverException != null);
     assert(cacheException != null);
+    assert(fireBaseAuthException != null);
     return conflict();
   }
 
@@ -1892,6 +1953,7 @@ class _$Conflict implements Conflict {
     TResult unexpectedError(),
     TResult serverException(),
     TResult cacheException(),
+    TResult fireBaseAuthException(String error),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -1923,6 +1985,7 @@ class _$Conflict implements Conflict {
     @required TResult unexpectedError(UnexpectedError value),
     @required TResult serverException(ServerError value),
     @required TResult cacheException(CacheError value),
+    @required TResult fireBaseAuthException(FireBaseAuthError value),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -1943,6 +2006,7 @@ class _$Conflict implements Conflict {
     assert(unexpectedError != null);
     assert(serverException != null);
     assert(cacheException != null);
+    assert(fireBaseAuthException != null);
     return conflict(this);
   }
 
@@ -1968,6 +2032,7 @@ class _$Conflict implements Conflict {
     TResult unexpectedError(UnexpectedError value),
     TResult serverException(ServerError value),
     TResult cacheException(CacheError value),
+    TResult fireBaseAuthException(FireBaseAuthError value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -2040,6 +2105,7 @@ class _$InternalServerError implements InternalServerError {
     @required TResult unexpectedError(),
     @required TResult serverException(),
     @required TResult cacheException(),
+    @required TResult fireBaseAuthException(String error),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -2060,6 +2126,7 @@ class _$InternalServerError implements InternalServerError {
     assert(unexpectedError != null);
     assert(serverException != null);
     assert(cacheException != null);
+    assert(fireBaseAuthException != null);
     return internalServerError();
   }
 
@@ -2085,6 +2152,7 @@ class _$InternalServerError implements InternalServerError {
     TResult unexpectedError(),
     TResult serverException(),
     TResult cacheException(),
+    TResult fireBaseAuthException(String error),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -2116,6 +2184,7 @@ class _$InternalServerError implements InternalServerError {
     @required TResult unexpectedError(UnexpectedError value),
     @required TResult serverException(ServerError value),
     @required TResult cacheException(CacheError value),
+    @required TResult fireBaseAuthException(FireBaseAuthError value),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -2136,6 +2205,7 @@ class _$InternalServerError implements InternalServerError {
     assert(unexpectedError != null);
     assert(serverException != null);
     assert(cacheException != null);
+    assert(fireBaseAuthException != null);
     return internalServerError(this);
   }
 
@@ -2161,6 +2231,7 @@ class _$InternalServerError implements InternalServerError {
     TResult unexpectedError(UnexpectedError value),
     TResult serverException(ServerError value),
     TResult cacheException(CacheError value),
+    TResult fireBaseAuthException(FireBaseAuthError value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -2233,6 +2304,7 @@ class _$NotImplemented implements NotImplemented {
     @required TResult unexpectedError(),
     @required TResult serverException(),
     @required TResult cacheException(),
+    @required TResult fireBaseAuthException(String error),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -2253,6 +2325,7 @@ class _$NotImplemented implements NotImplemented {
     assert(unexpectedError != null);
     assert(serverException != null);
     assert(cacheException != null);
+    assert(fireBaseAuthException != null);
     return notImplemented();
   }
 
@@ -2278,6 +2351,7 @@ class _$NotImplemented implements NotImplemented {
     TResult unexpectedError(),
     TResult serverException(),
     TResult cacheException(),
+    TResult fireBaseAuthException(String error),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -2309,6 +2383,7 @@ class _$NotImplemented implements NotImplemented {
     @required TResult unexpectedError(UnexpectedError value),
     @required TResult serverException(ServerError value),
     @required TResult cacheException(CacheError value),
+    @required TResult fireBaseAuthException(FireBaseAuthError value),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -2329,6 +2404,7 @@ class _$NotImplemented implements NotImplemented {
     assert(unexpectedError != null);
     assert(serverException != null);
     assert(cacheException != null);
+    assert(fireBaseAuthException != null);
     return notImplemented(this);
   }
 
@@ -2354,6 +2430,7 @@ class _$NotImplemented implements NotImplemented {
     TResult unexpectedError(UnexpectedError value),
     TResult serverException(ServerError value),
     TResult cacheException(CacheError value),
+    TResult fireBaseAuthException(FireBaseAuthError value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -2426,6 +2503,7 @@ class _$ServiceUnavailable implements ServiceUnavailable {
     @required TResult unexpectedError(),
     @required TResult serverException(),
     @required TResult cacheException(),
+    @required TResult fireBaseAuthException(String error),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -2446,6 +2524,7 @@ class _$ServiceUnavailable implements ServiceUnavailable {
     assert(unexpectedError != null);
     assert(serverException != null);
     assert(cacheException != null);
+    assert(fireBaseAuthException != null);
     return serviceUnavailable();
   }
 
@@ -2471,6 +2550,7 @@ class _$ServiceUnavailable implements ServiceUnavailable {
     TResult unexpectedError(),
     TResult serverException(),
     TResult cacheException(),
+    TResult fireBaseAuthException(String error),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -2502,6 +2582,7 @@ class _$ServiceUnavailable implements ServiceUnavailable {
     @required TResult unexpectedError(UnexpectedError value),
     @required TResult serverException(ServerError value),
     @required TResult cacheException(CacheError value),
+    @required TResult fireBaseAuthException(FireBaseAuthError value),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -2522,6 +2603,7 @@ class _$ServiceUnavailable implements ServiceUnavailable {
     assert(unexpectedError != null);
     assert(serverException != null);
     assert(cacheException != null);
+    assert(fireBaseAuthException != null);
     return serviceUnavailable(this);
   }
 
@@ -2547,6 +2629,7 @@ class _$ServiceUnavailable implements ServiceUnavailable {
     TResult unexpectedError(UnexpectedError value),
     TResult serverException(ServerError value),
     TResult cacheException(CacheError value),
+    TResult fireBaseAuthException(FireBaseAuthError value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -2619,6 +2702,7 @@ class _$NoInternetConnection implements NoInternetConnection {
     @required TResult unexpectedError(),
     @required TResult serverException(),
     @required TResult cacheException(),
+    @required TResult fireBaseAuthException(String error),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -2639,6 +2723,7 @@ class _$NoInternetConnection implements NoInternetConnection {
     assert(unexpectedError != null);
     assert(serverException != null);
     assert(cacheException != null);
+    assert(fireBaseAuthException != null);
     return noInternetConnection();
   }
 
@@ -2664,6 +2749,7 @@ class _$NoInternetConnection implements NoInternetConnection {
     TResult unexpectedError(),
     TResult serverException(),
     TResult cacheException(),
+    TResult fireBaseAuthException(String error),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -2695,6 +2781,7 @@ class _$NoInternetConnection implements NoInternetConnection {
     @required TResult unexpectedError(UnexpectedError value),
     @required TResult serverException(ServerError value),
     @required TResult cacheException(CacheError value),
+    @required TResult fireBaseAuthException(FireBaseAuthError value),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -2715,6 +2802,7 @@ class _$NoInternetConnection implements NoInternetConnection {
     assert(unexpectedError != null);
     assert(serverException != null);
     assert(cacheException != null);
+    assert(fireBaseAuthException != null);
     return noInternetConnection(this);
   }
 
@@ -2740,6 +2828,7 @@ class _$NoInternetConnection implements NoInternetConnection {
     TResult unexpectedError(UnexpectedError value),
     TResult serverException(ServerError value),
     TResult cacheException(CacheError value),
+    TResult fireBaseAuthException(FireBaseAuthError value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -2812,6 +2901,7 @@ class _$FormatException implements FormatException {
     @required TResult unexpectedError(),
     @required TResult serverException(),
     @required TResult cacheException(),
+    @required TResult fireBaseAuthException(String error),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -2832,6 +2922,7 @@ class _$FormatException implements FormatException {
     assert(unexpectedError != null);
     assert(serverException != null);
     assert(cacheException != null);
+    assert(fireBaseAuthException != null);
     return formatException();
   }
 
@@ -2857,6 +2948,7 @@ class _$FormatException implements FormatException {
     TResult unexpectedError(),
     TResult serverException(),
     TResult cacheException(),
+    TResult fireBaseAuthException(String error),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -2888,6 +2980,7 @@ class _$FormatException implements FormatException {
     @required TResult unexpectedError(UnexpectedError value),
     @required TResult serverException(ServerError value),
     @required TResult cacheException(CacheError value),
+    @required TResult fireBaseAuthException(FireBaseAuthError value),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -2908,6 +3001,7 @@ class _$FormatException implements FormatException {
     assert(unexpectedError != null);
     assert(serverException != null);
     assert(cacheException != null);
+    assert(fireBaseAuthException != null);
     return formatException(this);
   }
 
@@ -2933,6 +3027,7 @@ class _$FormatException implements FormatException {
     TResult unexpectedError(UnexpectedError value),
     TResult serverException(ServerError value),
     TResult cacheException(CacheError value),
+    TResult fireBaseAuthException(FireBaseAuthError value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -3005,6 +3100,7 @@ class _$UnableToProcess implements UnableToProcess {
     @required TResult unexpectedError(),
     @required TResult serverException(),
     @required TResult cacheException(),
+    @required TResult fireBaseAuthException(String error),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -3025,6 +3121,7 @@ class _$UnableToProcess implements UnableToProcess {
     assert(unexpectedError != null);
     assert(serverException != null);
     assert(cacheException != null);
+    assert(fireBaseAuthException != null);
     return unableToProcess();
   }
 
@@ -3050,6 +3147,7 @@ class _$UnableToProcess implements UnableToProcess {
     TResult unexpectedError(),
     TResult serverException(),
     TResult cacheException(),
+    TResult fireBaseAuthException(String error),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -3081,6 +3179,7 @@ class _$UnableToProcess implements UnableToProcess {
     @required TResult unexpectedError(UnexpectedError value),
     @required TResult serverException(ServerError value),
     @required TResult cacheException(CacheError value),
+    @required TResult fireBaseAuthException(FireBaseAuthError value),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -3101,6 +3200,7 @@ class _$UnableToProcess implements UnableToProcess {
     assert(unexpectedError != null);
     assert(serverException != null);
     assert(cacheException != null);
+    assert(fireBaseAuthException != null);
     return unableToProcess(this);
   }
 
@@ -3126,6 +3226,7 @@ class _$UnableToProcess implements UnableToProcess {
     TResult unexpectedError(UnexpectedError value),
     TResult serverException(ServerError value),
     TResult cacheException(CacheError value),
+    TResult fireBaseAuthException(FireBaseAuthError value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -3219,6 +3320,7 @@ class _$DefaultError implements DefaultError {
     @required TResult unexpectedError(),
     @required TResult serverException(),
     @required TResult cacheException(),
+    @required TResult fireBaseAuthException(String error),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -3239,6 +3341,7 @@ class _$DefaultError implements DefaultError {
     assert(unexpectedError != null);
     assert(serverException != null);
     assert(cacheException != null);
+    assert(fireBaseAuthException != null);
     return defaultError(error);
   }
 
@@ -3264,6 +3367,7 @@ class _$DefaultError implements DefaultError {
     TResult unexpectedError(),
     TResult serverException(),
     TResult cacheException(),
+    TResult fireBaseAuthException(String error),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -3295,6 +3399,7 @@ class _$DefaultError implements DefaultError {
     @required TResult unexpectedError(UnexpectedError value),
     @required TResult serverException(ServerError value),
     @required TResult cacheException(CacheError value),
+    @required TResult fireBaseAuthException(FireBaseAuthError value),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -3315,6 +3420,7 @@ class _$DefaultError implements DefaultError {
     assert(unexpectedError != null);
     assert(serverException != null);
     assert(cacheException != null);
+    assert(fireBaseAuthException != null);
     return defaultError(this);
   }
 
@@ -3340,6 +3446,7 @@ class _$DefaultError implements DefaultError {
     TResult unexpectedError(UnexpectedError value),
     TResult serverException(ServerError value),
     TResult cacheException(CacheError value),
+    TResult fireBaseAuthException(FireBaseAuthError value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -3415,6 +3522,7 @@ class _$UnexpectedError implements UnexpectedError {
     @required TResult unexpectedError(),
     @required TResult serverException(),
     @required TResult cacheException(),
+    @required TResult fireBaseAuthException(String error),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -3435,6 +3543,7 @@ class _$UnexpectedError implements UnexpectedError {
     assert(unexpectedError != null);
     assert(serverException != null);
     assert(cacheException != null);
+    assert(fireBaseAuthException != null);
     return unexpectedError();
   }
 
@@ -3460,6 +3569,7 @@ class _$UnexpectedError implements UnexpectedError {
     TResult unexpectedError(),
     TResult serverException(),
     TResult cacheException(),
+    TResult fireBaseAuthException(String error),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -3491,6 +3601,7 @@ class _$UnexpectedError implements UnexpectedError {
     @required TResult unexpectedError(UnexpectedError value),
     @required TResult serverException(ServerError value),
     @required TResult cacheException(CacheError value),
+    @required TResult fireBaseAuthException(FireBaseAuthError value),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -3511,6 +3622,7 @@ class _$UnexpectedError implements UnexpectedError {
     assert(unexpectedError != null);
     assert(serverException != null);
     assert(cacheException != null);
+    assert(fireBaseAuthException != null);
     return unexpectedError(this);
   }
 
@@ -3536,6 +3648,7 @@ class _$UnexpectedError implements UnexpectedError {
     TResult unexpectedError(UnexpectedError value),
     TResult serverException(ServerError value),
     TResult cacheException(CacheError value),
+    TResult fireBaseAuthException(FireBaseAuthError value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -3608,6 +3721,7 @@ class _$ServerError implements ServerError {
     @required TResult unexpectedError(),
     @required TResult serverException(),
     @required TResult cacheException(),
+    @required TResult fireBaseAuthException(String error),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -3628,6 +3742,7 @@ class _$ServerError implements ServerError {
     assert(unexpectedError != null);
     assert(serverException != null);
     assert(cacheException != null);
+    assert(fireBaseAuthException != null);
     return serverException();
   }
 
@@ -3653,6 +3768,7 @@ class _$ServerError implements ServerError {
     TResult unexpectedError(),
     TResult serverException(),
     TResult cacheException(),
+    TResult fireBaseAuthException(String error),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -3684,6 +3800,7 @@ class _$ServerError implements ServerError {
     @required TResult unexpectedError(UnexpectedError value),
     @required TResult serverException(ServerError value),
     @required TResult cacheException(CacheError value),
+    @required TResult fireBaseAuthException(FireBaseAuthError value),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -3704,6 +3821,7 @@ class _$ServerError implements ServerError {
     assert(unexpectedError != null);
     assert(serverException != null);
     assert(cacheException != null);
+    assert(fireBaseAuthException != null);
     return serverException(this);
   }
 
@@ -3729,6 +3847,7 @@ class _$ServerError implements ServerError {
     TResult unexpectedError(UnexpectedError value),
     TResult serverException(ServerError value),
     TResult cacheException(CacheError value),
+    TResult fireBaseAuthException(FireBaseAuthError value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -3800,6 +3919,7 @@ class _$CacheError implements CacheError {
     @required TResult unexpectedError(),
     @required TResult serverException(),
     @required TResult cacheException(),
+    @required TResult fireBaseAuthException(String error),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -3820,6 +3940,7 @@ class _$CacheError implements CacheError {
     assert(unexpectedError != null);
     assert(serverException != null);
     assert(cacheException != null);
+    assert(fireBaseAuthException != null);
     return cacheException();
   }
 
@@ -3845,6 +3966,7 @@ class _$CacheError implements CacheError {
     TResult unexpectedError(),
     TResult serverException(),
     TResult cacheException(),
+    TResult fireBaseAuthException(String error),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -3876,6 +3998,7 @@ class _$CacheError implements CacheError {
     @required TResult unexpectedError(UnexpectedError value),
     @required TResult serverException(ServerError value),
     @required TResult cacheException(CacheError value),
+    @required TResult fireBaseAuthException(FireBaseAuthError value),
   }) {
     assert(requestCancelled != null);
     assert(unauthorisedRequest != null);
@@ -3896,6 +4019,7 @@ class _$CacheError implements CacheError {
     assert(unexpectedError != null);
     assert(serverException != null);
     assert(cacheException != null);
+    assert(fireBaseAuthException != null);
     return cacheException(this);
   }
 
@@ -3921,6 +4045,7 @@ class _$CacheError implements CacheError {
     TResult unexpectedError(UnexpectedError value),
     TResult serverException(ServerError value),
     TResult cacheException(CacheError value),
+    TResult fireBaseAuthException(FireBaseAuthError value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -3933,4 +4058,227 @@ class _$CacheError implements CacheError {
 
 abstract class CacheError implements NetworkExceptions {
   const factory CacheError() = _$CacheError;
+}
+
+/// @nodoc
+abstract class $FireBaseAuthErrorCopyWith<$Res> {
+  factory $FireBaseAuthErrorCopyWith(
+          FireBaseAuthError value, $Res Function(FireBaseAuthError) then) =
+      _$FireBaseAuthErrorCopyWithImpl<$Res>;
+  $Res call({String error});
+}
+
+/// @nodoc
+class _$FireBaseAuthErrorCopyWithImpl<$Res>
+    extends _$NetworkExceptionsCopyWithImpl<$Res>
+    implements $FireBaseAuthErrorCopyWith<$Res> {
+  _$FireBaseAuthErrorCopyWithImpl(
+      FireBaseAuthError _value, $Res Function(FireBaseAuthError) _then)
+      : super(_value, (v) => _then(v as FireBaseAuthError));
+
+  @override
+  FireBaseAuthError get _value => super._value as FireBaseAuthError;
+
+  @override
+  $Res call({
+    Object error = freezed,
+  }) {
+    return _then(FireBaseAuthError(
+      error == freezed ? _value.error : error as String,
+    ));
+  }
+}
+
+/// @nodoc
+class _$FireBaseAuthError implements FireBaseAuthError {
+  const _$FireBaseAuthError(this.error) : assert(error != null);
+
+  @override
+  final String error;
+
+  @override
+  String toString() {
+    return 'NetworkExceptions.fireBaseAuthException(error: $error)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is FireBaseAuthError &&
+            (identical(other.error, error) ||
+                const DeepCollectionEquality().equals(other.error, error)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(error);
+
+  @override
+  $FireBaseAuthErrorCopyWith<FireBaseAuthError> get copyWith =>
+      _$FireBaseAuthErrorCopyWithImpl<FireBaseAuthError>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object>({
+    @required TResult requestCancelled(),
+    @required TResult unauthorisedRequest(),
+    @required TResult badRequest(),
+    @required TResult notFound(String reason),
+    @required TResult methodNotAllowed(),
+    @required TResult notAcceptable(),
+    @required TResult requestTimeout(),
+    @required TResult sendTimeout(),
+    @required TResult conflict(),
+    @required TResult internalServerError(),
+    @required TResult notImplemented(),
+    @required TResult serviceUnavailable(),
+    @required TResult noInternetConnection(),
+    @required TResult formatException(),
+    @required TResult unableToProcess(),
+    @required TResult defaultError(String error),
+    @required TResult unexpectedError(),
+    @required TResult serverException(),
+    @required TResult cacheException(),
+    @required TResult fireBaseAuthException(String error),
+  }) {
+    assert(requestCancelled != null);
+    assert(unauthorisedRequest != null);
+    assert(badRequest != null);
+    assert(notFound != null);
+    assert(methodNotAllowed != null);
+    assert(notAcceptable != null);
+    assert(requestTimeout != null);
+    assert(sendTimeout != null);
+    assert(conflict != null);
+    assert(internalServerError != null);
+    assert(notImplemented != null);
+    assert(serviceUnavailable != null);
+    assert(noInternetConnection != null);
+    assert(formatException != null);
+    assert(unableToProcess != null);
+    assert(defaultError != null);
+    assert(unexpectedError != null);
+    assert(serverException != null);
+    assert(cacheException != null);
+    assert(fireBaseAuthException != null);
+    return fireBaseAuthException(error);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object>({
+    TResult requestCancelled(),
+    TResult unauthorisedRequest(),
+    TResult badRequest(),
+    TResult notFound(String reason),
+    TResult methodNotAllowed(),
+    TResult notAcceptable(),
+    TResult requestTimeout(),
+    TResult sendTimeout(),
+    TResult conflict(),
+    TResult internalServerError(),
+    TResult notImplemented(),
+    TResult serviceUnavailable(),
+    TResult noInternetConnection(),
+    TResult formatException(),
+    TResult unableToProcess(),
+    TResult defaultError(String error),
+    TResult unexpectedError(),
+    TResult serverException(),
+    TResult cacheException(),
+    TResult fireBaseAuthException(String error),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (fireBaseAuthException != null) {
+      return fireBaseAuthException(error);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object>({
+    @required TResult requestCancelled(RequestCancelled value),
+    @required TResult unauthorisedRequest(UnauthorisedRequest value),
+    @required TResult badRequest(BadRequest value),
+    @required TResult notFound(NotFound value),
+    @required TResult methodNotAllowed(MethodNotAllowed value),
+    @required TResult notAcceptable(NotAcceptable value),
+    @required TResult requestTimeout(RequestTimeout value),
+    @required TResult sendTimeout(SendTimeout value),
+    @required TResult conflict(Conflict value),
+    @required TResult internalServerError(InternalServerError value),
+    @required TResult notImplemented(NotImplemented value),
+    @required TResult serviceUnavailable(ServiceUnavailable value),
+    @required TResult noInternetConnection(NoInternetConnection value),
+    @required TResult formatException(FormatException value),
+    @required TResult unableToProcess(UnableToProcess value),
+    @required TResult defaultError(DefaultError value),
+    @required TResult unexpectedError(UnexpectedError value),
+    @required TResult serverException(ServerError value),
+    @required TResult cacheException(CacheError value),
+    @required TResult fireBaseAuthException(FireBaseAuthError value),
+  }) {
+    assert(requestCancelled != null);
+    assert(unauthorisedRequest != null);
+    assert(badRequest != null);
+    assert(notFound != null);
+    assert(methodNotAllowed != null);
+    assert(notAcceptable != null);
+    assert(requestTimeout != null);
+    assert(sendTimeout != null);
+    assert(conflict != null);
+    assert(internalServerError != null);
+    assert(notImplemented != null);
+    assert(serviceUnavailable != null);
+    assert(noInternetConnection != null);
+    assert(formatException != null);
+    assert(unableToProcess != null);
+    assert(defaultError != null);
+    assert(unexpectedError != null);
+    assert(serverException != null);
+    assert(cacheException != null);
+    assert(fireBaseAuthException != null);
+    return fireBaseAuthException(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object>({
+    TResult requestCancelled(RequestCancelled value),
+    TResult unauthorisedRequest(UnauthorisedRequest value),
+    TResult badRequest(BadRequest value),
+    TResult notFound(NotFound value),
+    TResult methodNotAllowed(MethodNotAllowed value),
+    TResult notAcceptable(NotAcceptable value),
+    TResult requestTimeout(RequestTimeout value),
+    TResult sendTimeout(SendTimeout value),
+    TResult conflict(Conflict value),
+    TResult internalServerError(InternalServerError value),
+    TResult notImplemented(NotImplemented value),
+    TResult serviceUnavailable(ServiceUnavailable value),
+    TResult noInternetConnection(NoInternetConnection value),
+    TResult formatException(FormatException value),
+    TResult unableToProcess(UnableToProcess value),
+    TResult defaultError(DefaultError value),
+    TResult unexpectedError(UnexpectedError value),
+    TResult serverException(ServerError value),
+    TResult cacheException(CacheError value),
+    TResult fireBaseAuthException(FireBaseAuthError value),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (fireBaseAuthException != null) {
+      return fireBaseAuthException(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class FireBaseAuthError implements NetworkExceptions {
+  const factory FireBaseAuthError(String error) = _$FireBaseAuthError;
+
+  String get error;
+  $FireBaseAuthErrorCopyWith<FireBaseAuthError> get copyWith;
 }

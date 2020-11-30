@@ -1,20 +1,20 @@
 
 import 'package:mockito/mockito.dart';
-import 'package:tradedepot_demo/app/signUp/domain/useCases/auth.dart';
+import 'package:tradedepot_demo/app/signIn/domain/useCases/auth.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:tradedepot_demo/app/signUp/domain/user_repository.dart';
+import 'package:tradedepot_demo/app/signIn/domain/user_repository.dart';
 import 'package:tradedepot_demo/core/networkResponse/api_result.dart';
 
 class MockUserRepository extends Mock implements UserRepository{}
 
 void main() {
-  Auth useCase;
+  Authenticate useCase;
   MockUserRepository mockUserRepository;
 
 
   setUp(() {
     mockUserRepository = MockUserRepository();
-    useCase = Auth(mockUserRepository);
+    useCase = Authenticate(mockUserRepository);
   });
 
   final tEmail = "ty@gmail.com";

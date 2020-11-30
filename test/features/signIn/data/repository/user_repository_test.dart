@@ -2,10 +2,10 @@
 import 'package:flutter_riverpod/all.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
-import 'package:tradedepot_demo/app/signUp/data/dataSources/userRemoteDataSource.dart';
-import 'package:tradedepot_demo/app/signUp/data/dataSources/user_local_data_source.dart';
-import 'package:tradedepot_demo/app/signUp/data/models/user.dart';
-import 'package:tradedepot_demo/app/signUp/data/repository/userRepository.dart';
+import 'package:tradedepot_demo/app/signIn/data/dataSources/userRemoteDataSource.dart';
+import 'package:tradedepot_demo/app/signIn/data/dataSources/user_local_data_source.dart';
+import 'package:tradedepot_demo/app/signIn/data/models/user.dart';
+import 'package:tradedepot_demo/app/signIn/data/repository/userRepository.dart';
 import 'package:tradedepot_demo/core/connectivity/networkInfo.dart';
 import 'package:tradedepot_demo/core/networkResponse/api_result.dart';
 
@@ -184,10 +184,10 @@ void main() {
 
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
-import 'package:tradedepot_demo/app/signUp/data/dataSources/user_remote_data_source.dart';
-import 'package:tradedepot_demo/app/signUp/data/dataSources/user_local_data_source.dart';
-import 'package:tradedepot_demo/app/signUp/data/models/user.dart';
-import 'package:tradedepot_demo/app/signUp/data/repository/user_repository_impl.dart';
+import 'package:tradedepot_demo/app/signIn/data/dataSources/user_remote_data_source.dart';
+import 'package:tradedepot_demo/app/signIn/data/dataSources/user_local_data_source.dart';
+import 'package:tradedepot_demo/app/signIn/data/models/user.dart';
+import 'package:tradedepot_demo/app/signIn/data/repository/user_repository_impl.dart';
 import 'package:tradedepot_demo/core/connectivity/networkInfo.dart';
 import 'package:tradedepot_demo/core/error/exceptions.dart';
 import 'package:tradedepot_demo/core/networkExceptions/network_exceptions.dart';

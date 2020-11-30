@@ -1,4 +1,4 @@
-import 'package:tradedepot_demo/app/signUp/data/models/user.dart';
+import 'package:tradedepot_demo/app/signIn/data/models/user.dart';
 import 'package:tradedepot_demo/core/error/exceptions.dart';
 import 'package:tradedepot_demo/core/local_storage/sharedPref.dart';
 
@@ -57,12 +57,16 @@ class UserLocalDataSourceImpl implements UserLocalDataSource{
   Future<bool> getSignedInUser(String email, String password) async{
       final userJson = _pref.read("user");
       if(userJson != null) {
-        print("yes");
-        User user = User(firstName: "", lastName: "", email: email, username: "AB");
-        cacheCurrentUser(user);
-        return true;}
+        if (User
+            .fromJson(userJson)
+            .email == email) {
+          return true;
+        }
+        else {
+          return false;
+        }
+      }
       else {
-        print("no");
         throw CacheException();}
   }
 

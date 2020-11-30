@@ -1,6 +1,7 @@
+import 'package:flutter/material.dart';
 import 'package:mockito/mockito.dart';
-import 'package:tradedepot_demo/app/signUp/data/dataSources/user_local_data_source.dart';
-import 'package:tradedepot_demo/app/signUp/data/models/user.dart';
+import 'package:tradedepot_demo/app/signIn/data/dataSources/user_local_data_source.dart';
+import 'package:tradedepot_demo/app/signIn/data/models/user.dart';
 import 'package:tradedepot_demo/core/error/exceptions.dart';
 import 'package:tradedepot_demo/core/local_storage/sharedPref.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -44,22 +45,19 @@ void main() {
       when(mockSharedPref.read(key)).thenReturn(null);
       // act
 
-      final call = await localSource.getSignedInUser(tEmail, tPassword);
-
       //assert
-      expect(()  =>  localSource.getSignedInUser(tEmail, tPassword), throwsA(CacheException()));
+      expect(() async =>  await localSource.getSignedInUser(tEmail, tPassword), throwsA(isInstanceOf<CacheException>()));
       verify(mockSharedPref.read(key));
 
     });
 
     test("should call SharedPreferences to cache the data", () async{
-      Map<String,dynamic> json= User(firstName: " ", lastName: " ", email: tEmail, username: "AB").toJson();
+      User user = User(firstName: " ", lastName: " ", email: tEmail, username: "AB");
       // act
-       when(mockSharedPref.read(key)).thenReturn(json);
-       await localSource.getSignedInUser(tEmail, tPassword);
+      localSource.cacheCurrentUser(user);
 
       //assert
-      verify(mockSharedPref.save(key, json));
+      verify(mockSharedPref.save(key, user.toJson()));
 
     });
   });

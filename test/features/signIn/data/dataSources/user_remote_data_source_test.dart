@@ -1,5 +1,5 @@
 import 'package:mockito/mockito.dart';
-import 'package:tradedepot_demo/app/signUp/data/dataSources/user_remote_data_source.dart';
+import 'package:tradedepot_demo/app/signIn/data/dataSources/user_remote_data_source.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:tradedepot_demo/core/error/exceptions.dart';
 import 'package:tradedepot_demo/core/services/firebase/authentication.dart';
@@ -65,9 +65,8 @@ void main() {
       // act
 
       //assert
+      expect(()async=> await remoteSource.signIn(tEmail, tPassword), throwsA(isInstanceOf<ServerException>()));
       verify(mockAuthService.signIn(tEmail, tPassword));
-      expect(()async=> await remoteSource.signIn(tEmail, tPassword), throwsA(ServerException()));
-
     });
 
   });

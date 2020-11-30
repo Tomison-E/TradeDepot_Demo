@@ -1,12 +1,12 @@
-import 'package:tradedepot_demo/app/signUp/domain/user_repository.dart';
+import 'package:tradedepot_demo/app/signIn/domain/user_repository.dart';
 import 'package:tradedepot_demo/core/networkResponse/api_result.dart';
 import 'package:meta/meta.dart';
 import 'package:tradedepot_demo/core/usecases/usecase.dart';
 
 
 
-class Auth implements UseCase<bool,Params>{
-  Auth(this.repository);
+class Authenticate implements UseCase<ApiResult<bool>,Params>{
+  Authenticate(this.repository);
 
   final UserRepository repository;
 

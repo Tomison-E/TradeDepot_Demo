@@ -1,18 +1,14 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-
 import 'package:tradedepot_demo/core/networkResponse/api_result.dart';
 
-final fireStoreProvider = Provider((ref) => FirebaseFirestore.instance);
-final fireBaseClientProvider= Provider((ref) => FireBaseClient(ref.read));
 
 class FireBaseClient{
 
-  FireBaseClient(this._read);
-  final Reader _read;
+  FireBaseClient(this._fireStore);
+  final FirebaseFirestore _fireStore;
 
   Future<ApiResult<bool>> post(String collection, Object data) async {
-    CollectionReference _CR = _read(fireStoreProvider).collection(collection);
+    CollectionReference _CR = _fireStore.collection(collection);
     try {
      final value = await _CR.add(data);
      return ApiResult.success(data: value != null ? true : false);
@@ -24,8 +20,8 @@ class FireBaseClient{
 
   }
 
-  Future<ApiResult<bool>> Update(String collection, Object data, String docID) async {
-    CollectionReference _CR = _read(fireStoreProvider).collection(collection);
+  Future<ApiResult<bool>> update(String collection, Object data, String docID) async {
+    CollectionReference _CR = _fireStore.collection(collection);
     try {
        await _CR.doc(docID)
           .update(data);
@@ -41,7 +37,8 @@ class FireBaseClient{
   Future<QuerySnapshot> getWhere(String collection,String field, String value) async {
    // final data = await _read(fireStoreProvider).collection(collection).get();
     try {
-      return _read(fireStoreProvider).collection(collection).where(field,isEqualTo: value).limit(1).get();
+      final data = await _fireStore.collection(collection).where(field,isEqualTo: value).limit(1).get();
+      return data;
     }
     catch(e){
       print(e);
