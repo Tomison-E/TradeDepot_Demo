@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "147306557841",
+    "firebase_url": "https://tradedepotdemo.firebaseio.com",
+    "project_id": "tradedepotdemo",
+    "storage_bucket": "tradedepotdemo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:147306557841:android:08e4a0fb4c811f66c4aa30",
+        "android_client_info": {
+          "package_name": "com.example.tradedepot_demo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "147306557841-3bu5gndlvdfcpdgt6615qc2sg1f9eql8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAcirKsRJaeSU2bKZOVpKW1RPZbii2CKBg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "147306557841-3bu5gndlvdfcpdgt6615qc2sg1f9eql8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
