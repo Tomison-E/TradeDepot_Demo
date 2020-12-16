@@ -1,4 +1,4 @@
-# tradedepot_demo
+# tradedepot_demo project
 
 A new Flutter project.
 
