@@ -27,10 +27,10 @@ jobs:
         java-version: '12.x'
     
     # Setup the flutter environment.
-    - uses: subosito/flutter-action@v1
-      with:
+    - uses: subosito/flutter-action@v1.3.2
+      # with:
        #  flutter-version: '1.22.4'
-         channel: ‘master’ # 'dev', 'alpha', default to: 'stable'
+        # channel: ‘master’ # 'dev', 'alpha', default to: 'stable'
         # flutter-version: '1.12.x' # you can also specify exact version of flutter
     
     # Get flutter dependencies.
